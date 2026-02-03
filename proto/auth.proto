@@ -4,11 +4,25 @@ package auth.v1;
 
 service AuthService {
     rpc SendOtp (SendOtpRequest) returns (SendOtpResponse);
+
+    rpc VerifyOtp(VerifyOtpReq) returns (VerifyOtpRes);
 }
+
+
 
 message SendOtpRequest {
     string identifier = 1;
     string  type = 2;
+}
+
+message VerifyOtpReq  {
+    SendOtpRequest base = 1;
+    int32 code = 2;
+}
+
+message VerifyOtpRes {
+    string access_token = 1;
+    string refresh_token = 2;
 }
 
 message SendOtpResponse {
