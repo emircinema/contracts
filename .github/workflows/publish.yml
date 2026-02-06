@@ -25,6 +25,8 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y protobuf-compiler
       - name: Generate TS Protobuf
         run: yarn run generate
+      - name: BUILD
+        run: yarn run build
       - name: Publish to npm
         run: npm publish --access public
     env:

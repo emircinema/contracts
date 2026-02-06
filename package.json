@@ -2,9 +2,12 @@
   "name": "@emircinema/contracts",
   "version": "1.0.2",
   "scripts": {
-    "generate": "protoc -I ./proto ./proto/*.proto --ts_proto_out=./gen --ts_proto_opt=nestJs=true,package=omit"
+    "generate": "protoc -I ./proto ./proto/*.proto --ts_proto_out=./gen --ts_proto_opt=nestJs=true,package=omit",
+    "build": "tsc -p tsconfig.build.json"
   },
   "author": "emir",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -17,5 +20,9 @@
   "files": [
     "proto",
     "gen"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^25.2.1",
+    "typescript": "^5.9.3"
+  }
 }
