@@ -6,8 +6,17 @@ service AuthService {
     rpc SendOtp (SendOtpRequest) returns (SendOtpResponse);
 
     rpc VerifyOtp(VerifyOtpReq) returns (VerifyOtpRes);
+
+    rpc RefreshToken(RefreshTokenReq) returns (RefreshTokenRes);
 }
 
+message RefreshTokenReq  {
+    string refreshToken = 1;
+}
+message RefreshTokenRes {
+    string access_token = 1;
+    string refresh_token = 2;
+}
 
 
 message SendOtpRequest {
