@@ -1,6 +1,6 @@
 {
   "name": "@emircinema/contracts",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "scripts": {
     "generate": "protoc -I ./proto ./proto/*.proto --ts_proto_out=./gen --ts_proto_opt=nestJs=true,package=omit",
     "build": "tsc -p tsconfig.build.json"
