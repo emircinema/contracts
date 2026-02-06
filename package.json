@@ -19,7 +19,8 @@
   },
   "files": [
     "proto",
-    "gen"
+    "gen",
+    "dist"
   ],
   "devDependencies": {
     "@types/node": "^25.2.1",
